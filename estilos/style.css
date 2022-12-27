@@ -28,10 +28,12 @@ main {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.429);
     overflow: hidden; /*Com essa configuração tudo o que estiver fora da borda vai desaparecer, assim, não precisamos fazer uk border radius para todos os outros elementos.*/
+    transform: translate(-50%, -50%);
+    transition: width 0.3s, heigth 0.3s;
+    transition-timing-function: ease;
 }
 
 div#img-login {
@@ -84,18 +86,19 @@ div.campo-formulario input {
     text-indent: 5px;
 }
 
-div.campo-formulario input:active {
+div.campo-formulario input:focus-within {
     background: white;
 }
 
 .botao {
     width: 100%;
     border-radius: 5px;
-    border: none;
-    height: 40px;
+    line-height: 40px;
     margin-bottom: 5px;
     border: 1px solid var(--cor1);
     font-size: 0.9em;
+    text-align: center;
+    background: white;
 }
 
 .botao#entrar {
@@ -107,11 +110,11 @@ div.campo-formulario input:active {
     background: #316b69;
 }
 
-.botao#esqueci-senha {
-    background: white;
+.botao a {
+    text-decoration: none;
     color: #316b69;
 }
 
-.botao#esqueci-senha:hover {
+.botao:hover {
     background: #5dcbc7;
 }
