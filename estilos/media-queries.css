@@ -4,14 +4,13 @@
     }
 
     main {
-        width: 80vw;
+        width: 90vw;
         height: 280px;
     }
 
     div#img-login {
         width: 30%;
         height: 100%;
-        border-radius: 20px 0 0 20px;
         float: left;
     }
 
@@ -34,7 +33,7 @@
     
     div#img-login {
         width: 49%;
-        border-radius: 0 20px 20px 0;
+        height: 100%;
         float: right;
     }
 
